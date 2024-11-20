@@ -5,14 +5,14 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 
 const App = () => {
-  const [collapsed, setCollapsed] = useState(false)
-
+  const [collapsed, setCollapsed] = useState(true)
+ 
   return (
     <Layout>
       <Sidebar collapsed={collapsed} />
       <Layout>
         <Header collapsed={collapsed} setCollapsed={setCollapsed} />
-        <Content />
+        <Content collapsed={collapsed} />
       </Layout>
     </Layout>
   )
